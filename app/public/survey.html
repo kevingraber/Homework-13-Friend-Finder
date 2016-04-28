@@ -64,6 +64,13 @@
 <div class='row'>
 <div class='s6 offset-s6'>
 <form action="#">
+
+	<div class="row">
+		<div class="input-field col s6">
+			<input id="nameInput" type="text" class="validate">
+			<label class="active" for="first_name2">Name</label>
+		</div>
+	</div>
 	
 	<div class='section'>
 		<p>What is your favorite color?</p>
@@ -129,14 +136,25 @@
 	});
 
 	$("#submit").click(function(){
-		
-		alert($("input:radio[name=question1]:checked").val())
-		alert($("input:radio[name=question2]:checked").val())
+
+		// alert($("input:radio[name=question1]:checked").val())
+		// alert($("input:radio[name=question2]:checked").val())
 		// alert(thingy)
+		var answer1 = Number( $("input:radio[name=question1]:checked").val() )
+		var answer2 = parseInt( $("input:radio[name=question2]:checked").val() )
+
+		var scoreArray = [];
+
+		// scoreArray.push( parseInt( $("input:radio[name=question1]:checked").val() ) )
+		// scoreArray.push( parseInt( $("input:radio[name=question2]:checked").val() ) )
+
+		// scoreArray.push( answer1 )
+		// scoreArray.push( answer2 )
+		scoreArray.push(parseInt(5));
 
 		var person = {
-			q1: $("input:radio[name=question1]:checked").val(),
-			q2: $("input:radio[name=question2]:checked").val()
+			name: $('#nameInput').val(),
+			scores: scoreArray
 		};
 
 		var currentURL = window.location.origin;
