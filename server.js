@@ -1,6 +1,7 @@
 // Requiring Dependencies.
 var express = require('express')
 var bodyParser = require('body-parser')
+var path = require('path')
 
 // Create an instance of express server.
 var app = express();
@@ -15,8 +16,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 
-
-
+require('./app/routing/api-routes.js')(app); 
+require('./app/routing/html-routes.js')(app);
 
 
 

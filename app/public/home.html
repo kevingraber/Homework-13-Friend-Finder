@@ -7,11 +7,12 @@
 	<!-- Compiled and minified CSS for Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
-	<!-- Compiled and minified JavaScript for Materialize-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
 	<!-- jQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	
+	<!-- Compiled and minified JavaScript for Materialize-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
 </head>
 <body>
@@ -63,15 +64,34 @@
 <div class='row'>
 <div class='s6 offset-s6'>
 <form action="#">
+	
+	<div class='section'>
+		<p>What is your favorite color?</p>
+		<input name="question1" type="radio" id="color1" value="1"/>
+		<label for="color1">Red</label>
+		<input name="question1" type="radio" id="color2" value="2"/>
+		<label for="color2">Yellow</label>
+		<input class="with-gap" name="question1" type="radio" id="color3"  value="3"/>
+		<label for="color3">Green</label>
+		<input name="question1" type="radio" id="color4" value="4" />
+		<label for="color4">Brown</label>
+	</div>
 
-	<input name="group1" type="radio" id="test1" value="Red"/>
-	<label for="test1">Red</label>
-	<input name="group1" type="radio" id="test2" />
-	<label for="test2">Yellow</label>
-	<input class="with-gap" name="group1" type="radio" id="test3"  />
-	<label for="test3">Green</label>
-	<input name="group1" type="radio" id="test4" disabled="disabled" />
-	<label for="test4">Brown</label>
+	<div class='section'>
+		<p>What is your favorite band?</p>
+		<input name="question2" type="radio" id="band1" value="1"/>
+		<label for="band1">Red</label>
+		<input name="question2" type="radio" id="band2" value="2"/>
+		<label for="band2">Yellow</label>
+		<input class="with-gap" name="question2" type="radio" id="band3"  value="3"/>
+		<label for="band3">Green</label>
+		<input name="question2" type="radio" id="band4" value="4"/>
+		<label for="band4">Brown</label>
+	</div>
+	
+	<div class='section'>
+		<a class="waves-effect waves-light btn-large" id="submit">Button</a>
+	</div>
 
 </form>
 </div>
@@ -101,9 +121,18 @@
 </div>
 
 <script type="text/javascript">
-	$("input:radio[name=group1]").click(function() {
-    	alert($(this).val());
+
+	var thingy;
+	$("input:radio[name=question1]").click(function() {
+		thingy = $(this).val();
+    	// alert($(this).val());
 	});
+
+	$("#submit").click(function(){
+		alert($("input:radio[name=question1]:checked").val())
+		alert($("input:radio[name=question2]:checked").val())
+		// alert(thingy)
+	})
 </script>
 
 </body>
