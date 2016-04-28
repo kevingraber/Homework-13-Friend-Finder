@@ -17,7 +17,28 @@ module.exports = function(app){
     });
 
     app.post('/api/survey', function(req, res){
+        
+
+        console.log(req.body.name)
+        console.log(req.body.scores.length)
+
+        // var total;
+        // var match = "";
+
+        // for (var i = 0; i < friends.length; i++) {
+        //     var sum = 0
+        //     for (var j = 0; j < friends[i].scores.length; i++) {
+        //         sum += friends[i].scores[j]
+        //     }
+        //     if (sum > total) {
+        //         match = friends[i].name
+        //     }
+        // }
+
+        console.log(match)
+
         friends.push(req.body)
+
     });
 
 }

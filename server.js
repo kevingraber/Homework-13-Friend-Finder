@@ -9,6 +9,10 @@ var app = express();
 // Our port will be whatever we are given, or if given nothing it will be 80.
 var appPORT = process.env.PORT || 80;
 
+// Trying to get css to work ?!?!?!
+// Enabling Express to serve static files. (Allows our JavaScript files to be used)
+app.use('/public', express.static(__dirname + '/public'));
+
 // Body-parser middleware!
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
