@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "An app that will match people together based on compatability!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevingraber/Homework-13-Friend-Finder.git"
+  },
+  "author": "Kevin Graber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevingraber/Homework-13-Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/kevingraber/Homework-13-Friend-Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}
