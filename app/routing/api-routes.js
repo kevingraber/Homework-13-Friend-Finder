@@ -16,9 +16,8 @@ module.exports = function(app){
         res.json(friends);
     });
 
-    // If no matching route is found default to home
-    app.use(function(req, res){
-        res.sendFile(path.join(__dirname + '/../public/home.html'));
+    app.post('/api/survey', function(req, res){
+        friends.push(req.body)
     });
 
 }

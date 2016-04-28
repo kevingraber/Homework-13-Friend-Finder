@@ -1,11 +1,155 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+
+	<title>Survey</title>
+
+	<!-- Compiled and minified CSS for Materialize -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	
+	<!-- Compiled and minified JavaScript for Materialize-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
 </head>
 <body>
 
-	<h1>SURVERYYYYYYYYYYYYYY</h1>
+<div class='container'>
+
+	<!-- <div class='row'>
+		<h1>MATERIALIZE BABY</h1>
+		<div class='divider'></div>
+		<div class='section'>
+			<p>This is a section!</p>
+		</div>
+		<div class='divider'></div>
+		<div class='section'>
+			<p>This is another section!</p>
+		</div>
+	</div>
+	 -->
+
+	 <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Card Title</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Card Title</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<div class='row'>
+<div class='s6 offset-s6'>
+<form action="#">
+	
+	<div class='section'>
+		<p>What is your favorite color?</p>
+		<input name="question1" type="radio" id="color1" value="1"/>
+		<label for="color1">Red</label>
+		<input name="question1" type="radio" id="color2" value="2"/>
+		<label for="color2">Yellow</label>
+		<input class="with-gap" name="question1" type="radio" id="color3"  value="3"/>
+		<label for="color3">Green</label>
+		<input name="question1" type="radio" id="color4" value="4" />
+		<label for="color4">Brown</label>
+	</div>
+
+	<div class='section'>
+		<p>What is your favorite band?</p>
+		<input name="question2" type="radio" id="band1" value="1"/>
+		<label for="band1">Red</label>
+		<input name="question2" type="radio" id="band2" value="2"/>
+		<label for="band2">Yellow</label>
+		<input class="with-gap" name="question2" type="radio" id="band3"  value="3"/>
+		<label for="band3">Green</label>
+		<input name="question2" type="radio" id="band4" value="4"/>
+		<label for="band4">Brown</label>
+	</div>
+	
+	<div class='section'>
+		<a class="waves-effect waves-light btn-large" id="submit">Button</a>
+	</div>
+
+</form>
+</div>
+</div>
+
+
+<!-- 	<div class='row valign-wrapper'>
+
+			<div class="center-align card-panel hoverable lime">This is a card panel with a lime lighten-2 class</div>
+
+	</div> -->
+	<!-- 
+	<div class="row">
+
+		<div class="col s4">
+			Thing 1
+		</div>
+		<div class="col s4">
+			Thing 2
+		</div>
+		<div class="col s4">
+			Thing 3
+		</div>
+
+	</div> -->
+
+</div>
+
+<script type="text/javascript">
+
+	var thingy;
+	$("input:radio[name=question1]").click(function() {
+		thingy = $(this).val();
+    	// alert($(this).val());
+	});
+
+	$("#submit").click(function(){
+		
+		alert($("input:radio[name=question1]:checked").val())
+		alert($("input:radio[name=question2]:checked").val())
+		// alert(thingy)
+
+		var person = {
+			q1: $("input:radio[name=question1]:checked").val(),
+			q2: $("input:radio[name=question2]:checked").val()
+		};
+
+		var currentURL = window.location.origin;
+
+		$.post(currentURL + '/api/survey', person, function(data){
+			alert('post success!')
+		});
+
+	});
+
+	
+
+</script>
 
 </body>
 </html>
