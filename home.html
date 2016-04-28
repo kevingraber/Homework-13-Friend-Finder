@@ -10,6 +10,9 @@
 	<!-- Compiled and minified JavaScript for Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -55,7 +58,24 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
+
+<div class='row'>
+<div class='s6 offset-s6'>
+<form action="#">
+
+	<input name="group1" type="radio" id="test1" value="Red"/>
+	<label for="test1">Red</label>
+	<input name="group1" type="radio" id="test2" />
+	<label for="test2">Yellow</label>
+	<input class="with-gap" name="group1" type="radio" id="test3"  />
+	<label for="test3">Green</label>
+	<input name="group1" type="radio" id="test4" disabled="disabled" />
+	<label for="test4">Brown</label>
+
+</form>
+</div>
+</div>
 
 
 <!-- 	<div class='row valign-wrapper'>
@@ -80,7 +100,11 @@
 
 </div>
 
-
+<script type="text/javascript">
+	$("input:radio[name=group1]").click(function() {
+    	alert($(this).val());
+	});
+</script>
 
 </body>
 </html>
