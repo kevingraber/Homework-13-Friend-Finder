@@ -223,7 +223,7 @@
 	</div>
 	
 	<div class='section'>
-		<a class="waves-effect waves-light btn-large modal-trigger" href="#modal1" id="submit">Button</a>
+		<a class="waves-effect waves-light btn-large" id="submit">Button</a>
 	</div>
 
 	<!-- Modal Structure -->
@@ -316,8 +316,15 @@
 
 		var currentURL = window.location.origin;
 
-		$.post(currentURL + '/api/survey', person, function(data){
-			alert('post success!')
+		// $.post(currentURL + '/api/survey', person, function(data){
+		// 	console.log('post success!');
+		// });
+
+		$.post(currentURL + '/api/survey', person).done(function(data){
+			alert('post success!');
+			// console.log(data[0].name)
+			console.log(data[0].name)
+			$('#modal1').openModal();
 		});
 
 	});
