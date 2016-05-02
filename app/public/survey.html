@@ -220,7 +220,7 @@
 
 	<!-- Modal Structure -->
 	<div id="modal1" class="modal">
-		<div class="modal-content">
+		<div class="modal-content" id='modalArea'>
 			<h4>Modal Header</h4>
 			<p>A bunch of text</p>
 		</div>
@@ -268,9 +268,18 @@
 
 		// Making an AJAX post request.
 		$.post(currentURL + '/api/survey', person).done(function(data){
+			
 			alert('post success!');
-			console.log(data[0].name);
+			console.log(data[0].image);
 			$('#modal1').openModal();
+
+
+			var picture = '<img src="'+data[0].image+'"">';
+			$('#modalArea').append(picture)
+
+
+
+
 		});
 
 	});
