@@ -35,9 +35,9 @@ module.exports = function(app){
         //     }
         // }
 
-        console.log(match)
+        // console.log(match)
 
-        friends.push(req.body)
+        // friends.push(req.body)
 
     });
 
