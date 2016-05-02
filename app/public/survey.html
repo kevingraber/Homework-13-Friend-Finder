@@ -20,20 +20,8 @@
 </head>
 <body>
 
+<!-- Container for the Materialize framework. -->
 <div class='container'>
-
-	<!-- <div class='row'>
-		<h1>MATERIALIZE BABY</h1>
-		<div class='divider'></div>
-		<div class='section'>
-			<p>This is a section!</p>
-		</div>
-		<div class='divider'></div>
-		<div class='section'>
-			<p>This is another section!</p>
-		</div>
-	</div>
-	 -->
 
 	 <div class="row">
         <div class="col s12 m6">
@@ -64,10 +52,12 @@
         </div>
     </div>
 
+<!-- The Survey Form -->
 <div class='row'>
 <div class='s6 offset-s6'>
 <form action="#">
 
+	<!-- Name Input -->
 	<div class="row">
 		<div class="input-field col s12">
 			<input id="nameInput" type="text" class="validate">
@@ -75,6 +65,7 @@
 		</div>
 	</div>
 
+	<!-- Image Link Input -->
 	<div class="row">
 		<div class="input-field col s12">
 			<input id="imageInput" type="text" class="validate">
@@ -82,6 +73,7 @@
 		</div>
 	</div>
 	
+	<!-- Questions -->
 	<div class='section'>
 		<p>I like Star Wars more than Star Trek</p>
 		<input name="question1" type="radio" id="star1" value="1"/>
@@ -227,7 +219,7 @@
 	</div>
 
 	<!-- Modal Structure -->
-<!-- 	<div id="modal1" class="modal">
+	<div id="modal1" class="modal">
 		<div class="modal-content">
 			<h4>Modal Header</h4>
 			<p>A bunch of text</p>
@@ -235,95 +227,49 @@
 		<div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
 		</div>
-	</div> -->
-
-	  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
+	</div>
 
 </form>
 </div>
 </div>
-
-
-<!-- 	<div class='row valign-wrapper'>
-
-			<div class="center-align card-panel hoverable lime">This is a card panel with a lime lighten-2 class</div>
-
-	</div> -->
-	<!-- 
-	<div class="row">
-
-		<div class="col s4">
-			Thing 1
-		</div>
-		<div class="col s4">
-			Thing 2
-		</div>
-		<div class="col s4">
-			Thing 3
-		</div>
-
-	</div> -->
-
 </div>
 
+<!-- JavaScript & jQuery -->
 <script type="text/javascript">
-
 
 	// Code that makes modals trigger on click
 	$('.modal-trigger').leanModal();
 
-
-	var thingy;
-	$("input:radio[name=question1]").click(function() {
-		thingy = $(this).val();
-    	// alert($(this).val());
-	});
+	// var thingy;
+	// $("input:radio[name=question1]").click(function() {
+	// 	thingy = $(this).val();
+ //    	// alert($(this).val());
+	// });
 
 	$("#submit").click(function(){
 
-		// alert($("input:radio[name=question1]:checked").val())
-		// alert($("input:radio[name=question2]:checked").val())
-		// alert(thingy)
-		var answer1 = Number( $("input:radio[name=question1]:checked").val() )
-		var answer2 = parseInt( $("input:radio[name=question2]:checked").val() )
-
+		// Creating an array to hold the answers.
 		var scoreArray = [];
 
-		// scoreArray.push( $("input:radio[name=question1]:checked").val() );
-		// scoreArray.push( $("input:radio[name=question2]:checked").val() );
-
+		// Looping through the answers and pushing them to the array. 
 		for (var i = 1; i <= 10; i++) {
 			scoreArray.push( $("input:radio[name=question"+i+"]:checked").val() );
 		}
 
+		// Creating an object that stores all of the input given by the user.
 		var person = {
 			name: $('#nameInput').val(),
 			image: $('#imageInput').val(),
 			scores: scoreArray
 		};
 
+		// Storing our current URL in a variable.
 		var currentURL = window.location.origin;
 
-		// $.post(currentURL + '/api/survey', person, function(data){
-		// 	console.log('post success!');
-		// });
-
+		// Making an AJAX post request.
 		$.post(currentURL + '/api/survey', person).done(function(data){
 			alert('post success!');
-			// console.log(data[0].name)
-			console.log(data[0].name)
+			console.log(data[0].name);
 			$('#modal1').openModal();
 		});
 
