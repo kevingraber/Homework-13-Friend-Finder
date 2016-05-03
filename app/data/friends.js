@@ -14,6 +14,11 @@ var friends = [
 	name: 'Bernie',
 	image: 'http://images.dailykos.com/images/199343/story_image/BernieHoldingACat.jpg',
 	scores: [4, 5, 4, 2, 3, 4, 3, 5, 3, 4]
+},
+{
+	name: 'Kevin',
+	image: 'http://i.imgur.com/evxHspS.jpg',
+	scores: [4, 4, 4, 5, 5, 5, 2, 5, 5, 5]
 }
 
 ];
