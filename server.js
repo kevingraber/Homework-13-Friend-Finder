@@ -11,7 +11,8 @@ var appPORT = process.env.PORT || 80;
 
 // Trying to get css to work ?!?!?!
 // Enabling Express to serve static files. (Allows our JavaScript files to be used)
-app.use('/public', express.static(__dirname + '/public'));
+// app.use('/public', express.static(__dirname + '/public'));
+app.use(express.static('app/public'));
 
 // Body-parser middleware!
 app.use(bodyParser.json());
