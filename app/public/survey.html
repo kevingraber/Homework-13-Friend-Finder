@@ -4,15 +4,20 @@
 
 	<title>Survey</title>
 
-	<!-- Compiled and minified CSS for Materialize -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	
 
 
 	<!-- jQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+
+	<!-- Compiled and minified CSS for Materialize -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 	
 	<!-- Compiled and minified JavaScript for Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+	<!-- Materialize Icons CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -23,44 +28,28 @@
 <!-- Container for the Materialize framework. -->
 <div class='container'>
 
-	<div class="row">
-		<div class="col s12 m6">
-			<div class="card blue-grey darken-1">
-				<div class="card-content white-text">
-					<span class="card-title">Card Title</span>
-					<p>I am a very simple card. I am good at containing small bits of information.
-					I am convenient because I require little markup to use effectively.</p>
-				</div>
-				<div class="card-action">
-					<a href="#">This is a link</a>
-					<a href="#">This is a link</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col s12 m6">
-			<div class="card blue-grey darken-1">
-				<div class="card-content white-text">
-					<span class="card-title">Card Title</span>
-					<p>I am a very simple card. I am good at containing small bits of information.
-					I am convenient because I require little markup to use effectively.</p>
-				</div>
-				<div class="card-action">
-					<a href="#">This is a link</a>
-					<a href="#">This is a link</a>
-				</div>
-			</div>
+	<div class='row'>
+		<div class='col s12 m12 center-align'>
+			<h1>Survey</h1>
 		</div>
 	</div>
 
 	<!-- The Survey Form -->
 	<div class='row'>
 		<div class='s6 offset-s6'>
-			<form action="#">
+			<form>
+
+				<!-- About You Header -->
+				<div class="section">
+					<h4>About You</h4>
+					<div class="divider"></div>
+				</div>
+
 
 				<!-- Name Input -->
 				<div class="row">
-					<div class="input-field col s12">
+					<div class="input-field col s6">
+						<i class="material-icons prefix">account_circle</i>
 						<input id="nameInput" type="text" class="validate">
 						<label class="active" for="nameInput">Name</label>
 					</div>
@@ -68,15 +57,23 @@
 
 				<!-- Image Link Input -->
 				<div class="row">
-					<div class="input-field col s12">
+					<div class="input-field col s6">
+						<i class="material-icons prefix">perm_media</i>
 						<input id="imageInput" type="text" class="validate">
-						<label class="active" for="imageInput">Image</label>
+						<label class="active" for="imageInput">Image Link</label>
 					</div>
 				</div>
+
+				<!-- Questions Header -->
+				<div class="section">
+					<h4>Survey Questions</h4>
+					<div class="divider"></div>
+				</div>
+				
 				
 				<!-- Questions -->
 				<div class='section'>
-					<p>I like Star Wars more than Star Trek</p>
+					<p>1) I like Star Wars more than Star Trek</p>
 					<input name="question1" type="radio" id="star1" value="1"/>
 					<label for="star1">Strongly Disagree</label>
 					<input name="question1" type="radio" id="star2" value="2"/>
@@ -90,7 +87,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like Marvel more than DC</p>
+					<p>2) I like Marvel more than DC</p>
 					<input name="question2" type="radio" id="comic1" value="1"/>
 					<label for="comic1">Strongly Disagree</label>
 					<input name="question2" type="radio" id="comic2" value="2"/>
@@ -104,7 +101,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like Superman more than Batman</p>
+					<p>3) I like Superman more than Batman</p>
 					<input name="question3" type="radio" id="super1" value="1"/>
 					<label for="super1">Strongly Disagree</label>
 					<input name="question3" type="radio" id="super2" value="2"/>
@@ -118,7 +115,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like Coke more than Pepsi</p>
+					<p>4) I like Coke more than Pepsi</p>
 					<input name="question4" type="radio" id="coke1" value="1"/>
 					<label for="coke1">Strongly Disagree</label>
 					<input name="question4" type="radio" id="coke2" value="2"/>
@@ -132,7 +129,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like fall more than spring</p>
+					<p>5) I like fall more than spring</p>
 					<input name="question5" type="radio" id="season1" value="1"/>
 					<label for="season1">Strongly Disagree</label>
 					<input name="question5" type="radio" id="season2" value="2"/>
@@ -146,7 +143,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like coffee more than tea</p>
+					<p>6) I like coffee more than tea</p>
 					<input name="question6" type="radio" id="drink1" value="1"/>
 					<label for="drink1">Strongly Disagree</label>
 					<input name="question6" type="radio" id="drink2" value="2"/>
@@ -160,7 +157,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like cats more than dogs</p>
+					<p>7) I like cats more than dogs</p>
 					<input name="question7" type="radio" id="pet1" value="1"/>
 					<label for="pet1">Strongly Disagree</label>
 					<input name="question7" type="radio" id="pet2" value="2"/>
@@ -174,7 +171,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like Seinfeld more than Friends</p>
+					<p>8) I like Seinfeld more than Friends</p>
 					<input name="question8" type="radio" id="show1" value="1"/>
 					<label for="show1">Strongly Disagree</label>
 					<input name="question8" type="radio" id="show2" value="2"/>
@@ -188,7 +185,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like PC more than Mac</p>
+					<p>9) I like PC more than Mac</p>
 					<input name="question9" type="radio" id="computer1" value="1"/>
 					<label for="computer1">Strongly Disagree</label>
 					<input name="question9" type="radio" id="computer2" value="2"/>
@@ -202,7 +199,7 @@
 				</div>
 
 				<div class='section'>
-					<p>I like McDonalds more than Burger King</p>
+					<p>10) I like McDonalds more than Burger King</p>
 					<input name="question10" type="radio" id="food1" value="1"/>
 					<label for="food1">Strongly Disagree</label>
 					<input name="question10" type="radio" id="food2" value="2"/>
@@ -215,14 +212,21 @@
 					<label for="food5">Strongly Agree</label>
 				</div>
 				
+				<!-- <div class='section'>
+					<a class="waves-effect waves-light btn-large" id="submit" type="submit">Match Me!</a>
+				</div> -->
+
 				<div class='section'>
-					<a class="waves-effect waves-light btn-large" id="submit">Match Me!</a>
+				<button class="waves-effect waves-light btn-large" id="submit" type="button">
+					Match Me!
+				</button>
 				</div>
 
 				<!-- Modal Structure -->
 				<div id="modal1" class="modal">
-					<div class="modal-content" id='modalArea'>
+					<div class="modal-content">
 						<h4>Your closest match was...</h4>
+						<span id='modalArea'></span>
 					</div>
 					<div class="modal-footer">
 						<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
@@ -231,6 +235,19 @@
 
 			</form>
 		</div>
+	</div>
+
+	<!-- Links Button -->
+	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+		<a class="btn-floating btn-large red">
+			<i class="large material-icons">settings</i>
+		</a>
+		<ul>
+			<li><a class="btn-floating yellow darken-1 tooltipped" data-position="left" data-delay="50" data-tooltip="Github Repo" href="https://github.com/kevingraber/Homework-13-Friend-Finder" target="_blank"><i class="material-icons">code</i></a></li>
+			<li><a class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="API" href="/api/survey" target="_blank"><i class="material-icons">subject</i></a></li>
+			<li><a class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Portfolio" href="https://whispering-fortress-96565.herokuapp.com/index.html" target="_blank"><i class="material-icons">perm_identity</i></a></li>
+			<!-- <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li> -->
+		</ul>
 	</div>
 
 </div>
@@ -243,6 +260,20 @@
 
 	// When we click the submit button...
 	$("#submit").click(function(){
+
+		// Checking to see if user input a name & image.
+		if ( $('#nameInput').val() == null || $('#imageInput').val() == null ) {
+			alert("Please fill out all questions!");
+			return false;
+		};
+
+		// Checking to see if user answered all of the survey questions.
+		for (var i = 1; i <= 10; i++) {
+			if ( $("input:radio[name=question"+i+"]:checked").val() == null ) {
+				alert("Please fill out all questions!");
+				return false;
+			};
+		};
 
 		// Creating an array to hold the answers.
 		var scoreArray = [];
@@ -262,18 +293,14 @@
 		// Storing our current URL in a variable.
 		var currentURL = window.location.origin;
 
-		// Making an AJAX post request.
+		// Making an AJAX post request. The server calculates the match and sends back the info in the data object.
 		$.post(currentURL + '/api/survey', person).done(function(data){
 
-			for (var i = 0; i < data.length; i++) {
-
-			}
-
-			// alert('post success!');
-			console.log(data.image);
+			// Opens our modal.
 			$('#modal1').openModal();
 
-
+			// Populate out modal with information about the match.
+			$('#modalArea').empty()
 			var picture = '<img class="circle" src="'+data.image+'"">';
 			$('#modalArea').append("<h5>" + data.name + " !</h5>")
 			$('#modalArea').append(picture)
@@ -288,8 +315,58 @@
 <style type="text/css">
 	
 	img {
-		width:100px;
+		width:250px;
 	}
+
+	h1 {
+		font-weight: 600
+	}
+
+	h4 {
+		font-weight: 500
+	}
+
+	p {
+		font-size: 20px
+	}
+
+	  /* label color */
+/*   .input-field label {
+     color: #80deea;
+   }*/
+
+	[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+		background-color: #80deea;
+	}
+
+	[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, 
+	[type="radio"].with-gap:checked+label:after {
+    	border: 2px solid #80deea;
+	}
+
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #80deea;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #80deea;
+     box-shadow: 0 1px 0 0 #80deea;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #80deea;
+     box-shadow: 0 1px 0 0 #80deea;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #80deea;
+     box-shadow: 0 1px 0 0 #80deea;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #80deea;
+   }
 
 </style>
 </body>

@@ -12,7 +12,7 @@ var friends = [
 },
 {
 	name: 'Bernie',
-	image: 'https://01.img.society6.com/society6/img/nQs0Oq4hVzuNFynfZJQMX-7v9Bs/w_700/artwork/~artwork/s6-0066/a/27326061_9971749/~~/bernie-and-kittens-prints.jpg',
+	image: 'http://images.dailykos.com/images/199343/story_image/BernieHoldingACat.jpg',
 	scores: [4, 5, 4, 2, 3, 4, 3, 5, 3, 4]
 }
 
