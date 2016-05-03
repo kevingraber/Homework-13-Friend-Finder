@@ -14,6 +14,9 @@
 	<!-- Compiled and minified JavaScript for Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
+	<!-- Materialize Icons CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 
@@ -21,9 +24,26 @@
 <body>
 
 <!-- <h1>Welcome!</h1> -->
-<div class="valign-wrapper card-panel">
-  <h5 class="valign">Friend Finder!</h5>
+<div class="card blue-grey child">
+	<div class="card-content white-text">
+	<h1>Friend Finder!</h1>
+	</div>
+	<div class="card-action">
+              <a href="/survey">Get Started</a>
+    </div>
 </div>
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red" href="https://github.com/kevingraber/Homework-13-Friend-Finder"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
 
 <style type="text/css">
 /*	.card {
@@ -37,10 +57,20 @@
 	     transform: translate(-50%, -50%);
 	}*/
 
-	body {
+/*	body {
 	    display: flex;
 	    align-items: center;
 	    justify-content: center;
+	}*/
+
+	.parent {
+	  position: relative;
+	}
+	.child {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
 	}
 
 </style>
