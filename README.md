@@ -9,4 +9,4 @@ The front-end was creating using Materialize & jQuery while the back-end is comp
 [https://safe-bayou-97617.herokuapp.com/](https://safe-bayou-97617.herokuapp.com/)
 
 ## Questions
-For questions, contact Kevin Graber (kjg310@gmail.com)
+For questions, contact Kevin Graber (kjg310@gmail.com).
